@@ -1645,7 +1645,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 5668e1155ce3a2643a64b11ed475d244, type: 3}
+  m_audioClip: {fileID: 8300000, guid: a8d7e0c3355c4e545854da893be50170, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
@@ -1691,7 +1691,7 @@ AudioSource:
     m_Curve:
     - serializedVersion: 3
       time: 0
-      value: 0
+      value: 0.5
       inSlope: 0
       outSlope: 0
       tangentMode: 0
@@ -2114,6 +2114,16 @@ PrefabInstance:
       propertyPath: m_LocalPosition.z
       value: 1975.16
       objectReference: {fileID: 0}
+    - target: {fileID: 8416215777313149981, guid: 3e2f310d9f6973449aa4c78da8430324,
+        type: 3}
+      propertyPath: audioSteps
+      value: 
+      objectReference: {fileID: 8300000, guid: a8d7e0c3355c4e545854da893be50170, type: 3}
+    - target: {fileID: 8416215777313149981, guid: 3e2f310d9f6973449aa4c78da8430324,
+        type: 3}
+      propertyPath: soundSource
+      value: 
+      objectReference: {fileID: 1971752837}
     - target: {fileID: 8416215778082979509, guid: 3e2f310d9f6973449aa4c78da8430324,
         type: 3}
       propertyPath: shotAudio
