@@ -54,6 +54,7 @@ public class Launcher : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        Debug.DrawRay(camera.transform.GetChild(0).position, camera.transform.GetChild(0).forward, Color.blue);
 
         // handle fire rate
         _cooldownTimer -= Time.deltaTime;
@@ -101,7 +102,10 @@ public class Launcher : MonoBehaviour
                 // reset cooldown
                 _cooldownTimer = _cooldown;
                 RaycastHit raycastHit;
-                if (Physics.Raycast(camera.transform.position, camera.transform.forward, out raycastHit, 1000))
+
+                Vector3 pos = new Vector3(camera.transform.parent.position.x, camera.transform.position.y, camera.transform.parent.position.z);
+
+                if (Physics.Raycast(pos, camera.transform.forward, out raycastHit, 1000))
                 {
                     TargetBehaviour enemy;
                     if (raycastHit.transform.tag == "Enemy")
