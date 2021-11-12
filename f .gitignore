@@ -1,0 +1,15 @@
+.vs
+Temp
+obj
+Logs
+UserSettings
+Library/Artifacts
+TempArtifacts
+ArtifactDB
+Current*
+SceneVisibilityState.asset
+ShaderCache.db
+ShaderCache
+SourceAssetDB
+PackageCache
+Assembly*
