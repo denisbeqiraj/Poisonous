@@ -6,6 +6,10 @@ using UnityEngine.UIElements;
 
 public class Launcher : MonoBehaviour
 {
+    [SerializeField] private AudioSource soundSource;
+    [SerializeField] private AudioClip shotAudio;
+
+
     public int fireRateSeconds = 5;
 
     // This has to be set from Inspector (or can be loaded at runtime from Resource path)
@@ -120,6 +124,8 @@ public class Launcher : MonoBehaviour
                     }
                 }
                 _shotCounter++;
+
+                soundSource.PlayOneShot(shotAudio);
             }
         }
         
