@@ -9,6 +9,10 @@ using UnityEngine;
 
 public class PlayerCharacter : MonoBehaviour
 {
+    [SerializeField] private AudioSource soundSource;
+    [SerializeField] private AudioClip audioSteps;
+
+
     public CharacterController controller;
 
     public float speed = 5f;

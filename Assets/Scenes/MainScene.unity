@@ -2089,6 +2089,16 @@ PrefabInstance:
       propertyPath: slider
       value: 
       objectReference: {fileID: 912651477}
+    - target: {fileID: 8416215777295334988, guid: 3e2f310d9f6973449aa4c78da8430324,
+        type: 3}
+      propertyPath: audioSteps
+      value: 
+      objectReference: {fileID: 8300000, guid: 5668e1155ce3a2643a64b11ed475d244, type: 3}
+    - target: {fileID: 8416215777295334988, guid: 3e2f310d9f6973449aa4c78da8430324,
+        type: 3}
+      propertyPath: soundSource
+      value: 
+      objectReference: {fileID: 1971752837}
     - target: {fileID: 8416215777295334991, guid: 3e2f310d9f6973449aa4c78da8430324,
         type: 3}
       propertyPath: m_LocalPosition.x
