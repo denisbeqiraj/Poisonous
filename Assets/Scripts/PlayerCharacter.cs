@@ -9,10 +9,6 @@ using UnityEngine;
 
 public class PlayerCharacter : MonoBehaviour
 {
-    [SerializeField] private AudioSource soundSource;
-    [SerializeField] private AudioClip audioSteps;
-
-
     public CharacterController controller;
 
     public float speed = 5f;
@@ -64,6 +60,7 @@ public class PlayerCharacter : MonoBehaviour
 
         controller.Move(move * speed * Time.deltaTime);
         velocity.y += gravity * Time.deltaTime;
+
         if (Input.GetButtonDown("Jump") && isGrounded)
         {
             velocity.y = Mathf.Sqrt(jumpHeight * -2f * gravity);

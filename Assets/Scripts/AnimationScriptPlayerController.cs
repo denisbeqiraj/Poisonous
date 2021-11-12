@@ -4,6 +4,9 @@ using UnityEngine;
 
 public class AnimationScriptPlayerController : MonoBehaviour
 {
+    [SerializeField] private AudioSource soundSource;
+    [SerializeField] private AudioClip audioSteps;
+
     Animator animator;
     int isWalkingHash;
     int isRunningHash;
@@ -54,11 +57,21 @@ public class AnimationScriptPlayerController : MonoBehaviour
 
 
         bool leftShiftPress = Input.GetKey("left shift");
+
+        if (forwardPress)
+        {
+            if (!soundSource.isPlaying)
+            {
+                soundSource.PlayOneShot(audioSteps);
+            }
+        }
+
         if (!isWalking && forwardPress)
         {
             animator.SetBool(isAimHash, false);
             animator.SetBool(isAimWalkHash, false);
             animator.SetBool(isWalkingHash, true);
+
         }
         if (isWalking && !forwardPress)
         {
