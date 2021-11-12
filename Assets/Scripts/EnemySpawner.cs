@@ -4,29 +4,37 @@ using UnityEngine;
 
 public class EnemySpawner : MonoBehaviour
 {
-    private Camera camera;
     public GameObject zombie;
     // Start is called before the first frame update
     void Start()
     {
-        camera = GetComponentInChildren<Camera>();
+        InvokeRepeating("spawnEnemy", 1, 1);
     }
 
     // Update is called once per frame
     void Update()
     {
-
     }
 
     public void spawnEnemy()
     {
-        RaycastHit raycastHit;
-        if (Physics.Raycast(camera.transform.position, camera.transform.forward, out raycastHit, 1000))
+        Vector3 position = transform.position;
+        for (int i = 0; i < 100; i++)
         {
-            if (raycastHit.transform.tag == "Terrain")
+            RaycastHit raycastHit;
+            Vector3 spawnPosition;
+            spawnPosition.x = position.x + Random.Range(-17, 17);
+            spawnPosition.y = position.y + Random.Range(0, 17);
+            spawnPosition.z = position.z + Random.Range(-17, 17);
+            if (Physics.Raycast(spawnPosition, spawnPosition - new Vector3(0, 10, 0), out raycastHit, 50))
             {
-                Instantiate(zombie, raycastHit.point, Quaternion.identity);
+                if (raycastHit.transform.tag == "Terrain")
+                {
+                    Instantiate(zombie, spawnPosition, Quaternion.Euler(new Vector3(Random.Range(0, 360), 0, 0)));
+
+                }
             }
         }
     }
+
 }
