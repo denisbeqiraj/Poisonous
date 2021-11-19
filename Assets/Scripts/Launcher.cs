@@ -58,8 +58,6 @@ public class Launcher : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Debug.DrawRay(camera.transform.GetChild(0).position, camera.transform.GetChild(0).forward, Color.blue);
-
         // handle fire rate
         _cooldownTimer -= Time.deltaTime;
         _canShoot = false;
@@ -107,7 +105,7 @@ public class Launcher : MonoBehaviour
                 _cooldownTimer = _cooldown;
                 RaycastHit raycastHit;
 
-                Vector3 pos = new Vector3(camera.transform.parent.position.x, camera.transform.position.y, camera.transform.parent.position.z);
+                Vector3 pos = new Vector3(camera.transform.parent.position.x, camera.transform.position.y, shotSpawn.position.z);
 
                 if (Physics.Raycast(pos, camera.transform.forward, out raycastHit, 1000))
                 {
@@ -128,8 +126,7 @@ public class Launcher : MonoBehaviour
                 soundSource.PlayOneShot(shotAudio);
             }
         }
-        
-        
+
         transform.localRotation = Quaternion.Euler(0, 0, 0);
         
     }
