@@ -5423,6 +5423,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 84f73ffcd27efab4096ea0c0628ccb01, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  soundSource: {fileID: 0}
+  audioSteps: {fileID: 0}
   hand: {fileID: 8416215778413216680}
   camera: {fileID: 8416215777739878533}
 --- !u!1 &8416215777334329626
@@ -11553,6 +11555,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 930e10ae2864dc64eb676b3c56f2829f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  soundSource: {fileID: 0}
+  shotAudio: {fileID: 0}
   fireRateSeconds: 5
   shot: {fileID: 7698680340343405464, guid: 6657a9c67ca4357479a87ae274798a1e, type: 3}
   shootSpeed: 200
