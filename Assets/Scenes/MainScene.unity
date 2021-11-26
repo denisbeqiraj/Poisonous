@@ -22846,7 +22846,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 38
+  m_RootOrder: 37
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &2053719380
 PrefabInstance:
@@ -24242,6 +24242,11 @@ PrefabInstance:
       propertyPath: slider
       value: 
       objectReference: {fileID: 912651477}
+    - target: {fileID: 8416215777295334986, guid: 3e2f310d9f6973449aa4c78da8430324,
+        type: 3}
+      propertyPath: m_Center.y
+      value: 0.27
+      objectReference: {fileID: 0}
     - target: {fileID: 8416215777295334988, guid: 3e2f310d9f6973449aa4c78da8430324,
         type: 3}
       propertyPath: slider
