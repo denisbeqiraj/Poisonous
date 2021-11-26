@@ -6,7 +6,6 @@ public class ItemSpammer : MonoBehaviour
 {
 
     [SerializeField] private GameObject bananaObj;
-    [SerializeField] private GameObject player;
     [SerializeField] private Terrain terrain;
     [SerializeField] private int numItems;
 
