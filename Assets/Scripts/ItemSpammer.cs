@@ -20,7 +20,7 @@ public class ItemSpammer : MonoBehaviour
         float maxY = terrainSize.y;
         float maxZ = terrainSize.z;
 
-        Vector3 pos = new Vector3(terrainPos.x, maxY / 4, terrainPos.z);
+        Vector3 pos = new Vector3(terrainPos.x, maxY / 12, terrainPos.z);
 
         //DIMENSIONI MASSIME QUADRATO TERRAIN
 
