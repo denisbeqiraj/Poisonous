@@ -13,9 +13,9 @@ public class ItemSpammer : MonoBehaviour
     void Start()
     {
         Vector3 terrainPos = terrain.transform.position;
-        Debug.Log("Pos " + terrainPos);
+
         Vector3 terrainSize = terrain.terrainData.size;
-        Debug.Log("Size " + terrainSize);
+
         float maxX = terrainSize.x;
         float maxY = terrainSize.y;
         float maxZ = terrainSize.z;
