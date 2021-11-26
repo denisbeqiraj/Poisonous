@@ -15,7 +15,6 @@ public class ItemOperation : MonoBehaviour
     {
         if(transform.position.y < 0)
         {
-            Debug.Log("Destroy");
             Destroy(gameObject);
         }
 
