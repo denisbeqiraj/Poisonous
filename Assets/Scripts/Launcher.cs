@@ -115,6 +115,14 @@ public class Launcher : MonoBehaviour
                         enemy = raycastHit.transform.GetComponent<TargetBehaviour>();
                         enemy.Hit(10);
                     }
+
+                    BuildHittable build;
+                    if (raycastHit.transform.tag.Contains("Build"))
+                    {
+                        build = raycastHit.transform.GetComponent<BuildHittable>();
+                        build.hit(30);
+                    }
+
                     GameObject objectHit = Instantiate(particleHit[0], raycastHit.point, raycastHit.transform.rotation);
                     if (objectHit != null)
                     {

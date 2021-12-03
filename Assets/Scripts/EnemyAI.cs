@@ -32,5 +32,55 @@ public class EnemyAI : MonoBehaviour
             navMesh.velocity = Vector3.zero;
             navMesh.isStopped = true;
         }
+
+        RaycastHit raycastHit;
+
+        Vector3 pos = new Vector3(transform.position.x, transform.position.y, transform.position.z);
+
+        if (Physics.Raycast(pos, transform.forward, out raycastHit, 10))
+        {
+
+            Debug.Log("Hit");
+            Debug.Log(raycastHit.transform.name);
+
+            if (raycastHit.transform.tag.Equals("Player"))
+            {
+                Debug.Log("Player");
+                TargetBehaviour player = raycastHit.transform.GetComponent<TargetBehaviour>();
+
+                player.Hit(10);
+
+            }
+
+            if (raycastHit.transform.tag.Contains("Build"))
+            {
+                Debug.Log("Build");
+                BuildHittable build = raycastHit.transform.GetComponent<BuildHittable>();
+
+                build.hit(30);
+            }
+        }
     }
+
+    /*private void OnCollisionEnter(Collision collision)
+    {
+        Debug.Log("Hit");
+        Debug.Log(collision.gameObject.name);
+
+        if(collision.gameObject.tag.Equals("Player")){
+            Debug.Log("Player");
+            TargetBehaviour player = collision.gameObject.GetComponent<TargetBehaviour>();
+
+            player.Hit(10);
+
+        }
+
+        if (collision.gameObject.tag.Contains("Build"))
+        {
+            Debug.Log("Build");
+            BuildHittable build = collision.gameObject.GetComponent<BuildHittable>();
+
+            build.hit(30);
+        }
+    }*/
 }
