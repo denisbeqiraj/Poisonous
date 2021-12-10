@@ -8,6 +8,10 @@ public class EnemyAI : MonoBehaviour
     public GameObject[] player;
     private TargetBehaviour target;
     public Animator animator;
+
+    [SerializeField] private GameObject head;
+    [SerializeField] private GameObject leg;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -15,6 +19,7 @@ public class EnemyAI : MonoBehaviour
         target = GetComponent<TargetBehaviour>();
         animator = GetComponentInChildren<Animator>();
         player = GameObject.FindGameObjectsWithTag("Player");
+        Invoke("Despawn", 2);
     }
 
     // Update is called once per frame
@@ -35,29 +40,51 @@ public class EnemyAI : MonoBehaviour
 
         RaycastHit raycastHit;
 
-        Vector3 pos = new Vector3(transform.position.x, transform.position.y, transform.position.z);
+        Vector3 pos = new Vector3(head.transform.position.x, head.transform.position.y, head.transform.position.z);
 
         if (Physics.Raycast(pos, transform.forward, out raycastHit, 10))
         {
+            hitted(raycastHit);
+        }
+        else{
+            pos = new Vector3(leg.transform.position.x, leg.transform.position.y, leg.transform.position.z);
 
-            Debug.Log("Hit");
-            Debug.Log(raycastHit.transform.name);
-
-            if (raycastHit.transform.tag.Equals("Player"))
+            if (Physics.Raycast(pos, transform.forward, out raycastHit, 10))
             {
-                Debug.Log("Player");
-                TargetBehaviour player = raycastHit.transform.GetComponent<TargetBehaviour>();
-
-                player.Hit(10);
-
+                hitted(raycastHit);
             }
+        }
+    }
 
-            if (raycastHit.transform.tag.Contains("Build"))
+    private void hitted(RaycastHit raycastHit)
+    {
+        if (raycastHit.transform.tag.Equals("Player"))
+        {
+            Debug.Log("Player");
+            TargetBehaviour player = raycastHit.transform.GetComponent<TargetBehaviour>();
+
+            player.Hit(10);
+
+        }
+
+        if (raycastHit.transform.tag.Contains("Build"))
+        {
+            BuildHittable build = raycastHit.transform.GetComponent<BuildHittable>();
+
+            build.hit(30);
+        }
+    }
+
+    void Despawn()
+    {
+        RaycastHit[] hits;
+        hits = Physics.RaycastAll(transform.position, Vector3.down, 1000);
+        for (int i = 0; i < hits.Length; i++)
+        {
+            RaycastHit hit = hits[i];
+            if (hit.transform.name.Contains("Terrain") && hit.distance > 20)
             {
-                Debug.Log("Build");
-                BuildHittable build = raycastHit.transform.GetComponent<BuildHittable>();
-
-                build.hit(30);
+                Destroy(gameObject);
             }
         }
     }
