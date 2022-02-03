@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class TargetBehaviour : MonoBehaviour
 {
@@ -10,6 +11,8 @@ public class TargetBehaviour : MonoBehaviour
     public Collider[] allColliders;
     public Animator animator;
     public int health;
+
+    [SerializeField] private MenuController menuController;
     void Awake()
     {
         mainController = GetComponent<Collider>();
@@ -26,8 +29,15 @@ public class TargetBehaviour : MonoBehaviour
     public void Die()
     {
         Animator children = GetComponentInChildren<Animator>();
-        DoRagdoll(true);
-        StartCoroutine("DieTarget");
+        
+        if(gameObject.tag == "Enemy")
+        {
+            DoRagdoll(true);
+            StartCoroutine(DieEnemy());
+        }else if(gameObject.tag == "Player")
+        {
+            DiePlayer();
+        }
     }
 
     public void Hit(int damage)
@@ -36,14 +46,22 @@ public class TargetBehaviour : MonoBehaviour
         if (health <= 0)
         {
             Die();
+            Debug.Log(gameObject.tag + " die");
         }
     }
 
-    public IEnumerator DieTarget()
+    public IEnumerator DieEnemy()
     {
         isAlive = false;
         yield return new WaitForSeconds(5.0f);
         Destroy(gameObject);
+    }
+
+    public void DiePlayer()
+    {
+        isAlive = false;
+        Screen.lockCursor = false;
+        menuController.loadScene("LoseScene");
     }
 
     public bool getIsAlive()

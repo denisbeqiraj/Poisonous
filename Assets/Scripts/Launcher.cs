@@ -109,8 +109,6 @@ public class Launcher : MonoBehaviour
 
                 if (Physics.Raycast(pos, camera.transform.forward, out raycastHit, 1000))
                 {
-                    Debug.DrawRay(pos, camera.transform.forward, Color.green);
-
 
                     TargetBehaviour enemy;
                     if (raycastHit.transform.tag == "Enemy")
