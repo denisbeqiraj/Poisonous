@@ -15,7 +15,35 @@ public class MenuController : MonoBehaviour
 
     public void loadScene(string scene)
     {
-        SceneManager.LoadScene(scene);
+        if(scene == "MainScene")
+        {
+            switch (difficulty)
+            {
+                case "EASY":
+                    SceneManager.LoadScene("EasyMainScene");
+                    break;
+
+                case "HARD":
+                    SceneManager.LoadScene("HardMainScene");
+                    break;
+            }
+        }else if(scene == "BossScene")
+        {
+            switch (difficulty)
+            {
+                case "EASY":
+                    SceneManager.LoadScene("EasyBossScene");
+                    break;
+
+                case "HARD":
+                    SceneManager.LoadScene("HardBossScene");
+                    break;
+            }
+        }
+        else
+        {
+            SceneManager.LoadScene(scene);
+        }
     }
 
     public void openObject(string name)
