@@ -43,7 +43,6 @@ public class PlayerCharacter : MonoBehaviour
         gun = gameObject.transform.Find("Main Camera").Find("Gun").gameObject;
 
         dialogController = dialogSystem.GetComponent<DialogController>();
-        Debug.Log(dialogController);
     }
 
     public void setLife(int life)
