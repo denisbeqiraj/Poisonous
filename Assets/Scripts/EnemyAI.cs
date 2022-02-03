@@ -15,6 +15,10 @@ public class EnemyAI : MonoBehaviour
 
     [SerializeField] private AudioSource zombieSoundSource;
     [SerializeField] private AudioClip zombieAudioClip;
+    
+    [SerializeField] private GameObject sharedStats;
+    private int damagePlayer;
+    private int damageStructures;
 
     private bool isThrow;
     public GameObject projectile;
@@ -33,6 +37,18 @@ public class EnemyAI : MonoBehaviour
         else
         {
             isThrow = false;
+        }
+
+        switch (sharedStats.GetComponent<SharedStats>().getDifficulty())
+        {
+            case "EASY":
+                damagePlayer = 10;
+                damageStructures = 30;
+                break;
+            case "HARD":
+                damagePlayer = 20;
+                damageStructures = 50;
+                break;
         }
     }
 
@@ -103,7 +119,7 @@ public class EnemyAI : MonoBehaviour
             {
                 timeRemaining = 3;
                 TargetBehaviour player = raycastHit.transform.GetComponent<TargetBehaviour>();
-                player.Hit(10);
+                player.Hit(damagePlayer);
             }
         }
 
@@ -117,7 +133,7 @@ public class EnemyAI : MonoBehaviour
 
                 if (build != null)
                 {
-                    build.hit(30);
+                    build.hit(damageStructures);
                 }
             }
         }

@@ -10,6 +10,7 @@ public class ItemSpammer : MonoBehaviour
     [SerializeField] private GameObject ammoObj;
     [SerializeField] private Terrain terrain;
     [SerializeField] private int numItems;
+    [SerializeField] private GameObject sharedStats;
 
     private static int numItemAvailable = 3;
     private GameObject[] items = new GameObject[numItemAvailable];
@@ -41,13 +42,7 @@ public class ItemSpammer : MonoBehaviour
         pos = new Vector3(terrainPos.x, 10, terrainPos.z + terrainSize.z);
         Instantiate(bananaObj, pos, Quaternion.identity);*/
 
-        SharedStats sharedStats = gameObject.transform.parent.Find("SharedStats").gameObject.GetComponent<SharedStats>();
-
-        Debug.Log(gameObject.transform.parent.name);
-
-        Debug.Log(sharedStats.getDifficulty());
-
-        switch (sharedStats.getDifficulty())
+        switch (sharedStats.GetComponent<SharedStats>().getDifficulty())
         {
             case "EASY":
                 numItems = 5000;
@@ -56,6 +51,8 @@ public class ItemSpammer : MonoBehaviour
                 numItems = 3000;
                 break;
         }
+
+        Debug.Log(sharedStats.GetComponent<SharedStats>().getDifficulty());
 
         //zone sicurezza
         float minX = terrainPos.x + 10;

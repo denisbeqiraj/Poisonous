@@ -9,6 +9,10 @@ public class Launcher : MonoBehaviour
     [SerializeField] private AudioSource soundSource;
     [SerializeField] private AudioClip shotAudio;
 
+    [SerializeField] private GameObject sharedStats;
+    private int damageZombie;
+    private int damageStructures;
+
 
     public int fireRateSeconds = 5;
 
@@ -60,6 +64,18 @@ public class Launcher : MonoBehaviour
     {
         _cooldown = 1f / fireRateSeconds;
         buildingSystem = GetComponentInParent<BuildingSystem>();
+
+        switch (sharedStats.GetComponent<SharedStats>().getDifficulty())
+        {
+            case "EASY":
+                damageZombie = 20;
+                damageStructures = 10;
+                break;
+            case "HARD":
+                damageZombie = 10;
+                damageStructures = 30;
+                break;
+        }
     }
 
     // Update is called once per frame
@@ -136,14 +152,14 @@ public class Launcher : MonoBehaviour
                     if (raycastHit.transform.tag == "Enemy")
                     {
                         enemy = raycastHit.transform.GetComponent<TargetBehaviour>();
-                        enemy.Hit(10);
+                        enemy.Hit(damageZombie);
                     }
 
                     BuildHittable build;
                     if (raycastHit.transform.tag.Contains("Build"))
                     {
                         build = raycastHit.transform.GetComponent<BuildHittable>();
-                        build.hit(30);
+                        build.hit(damageStructures);
                     }
 
                     GameObject objectHit = Instantiate(particleHit[0], raycastHit.point, raycastHit.transform.rotation);
