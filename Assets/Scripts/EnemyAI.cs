@@ -38,6 +38,11 @@ public class EnemyAI : MonoBehaviour
             navMesh.isStopped = true;
         }
 
+        if (Vector3.Magnitude(transform.position - player[0].transform.position) > 250 && target.getIsAlive())
+        {
+            Destroy(gameObject);
+        }
+
         RaycastHit raycastHit;
 
         Vector3 pos = new Vector3(head.transform.position.x, head.transform.position.y, head.transform.position.z);
