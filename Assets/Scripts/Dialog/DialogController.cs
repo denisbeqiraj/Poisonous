@@ -50,8 +50,8 @@ public class DialogController : MonoBehaviour
             i++;
         }*/
 
-        /*text = "PPPPPPPPPPPPPPPPPPPPPPPPPPP\ndadad";*/
-        textDialog.text = "ok";
+        text = "PPPPPPPPPPPPPPPPPPPPPPPPPPP\ndadad";
+        textDialog.text = text;
 
         /*if(text != null)
         {
