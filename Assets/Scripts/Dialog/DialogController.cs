@@ -53,6 +53,17 @@ public class DialogController : MonoBehaviour
         else
         {
             textDialog.enabled = false;
+            file = "";
         }  
+    }
+
+    public Boolean isReaderNull()
+    {
+        return reader == null ? true : false;
+    }
+
+    public string getFile()
+    {
+        return file;
     }
 }

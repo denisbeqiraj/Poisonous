@@ -110,13 +110,24 @@ public class PlayerCharacter : MonoBehaviour
             RaycastHit raycastHit;
             if (Physics.Raycast(camera.transform.position, camera.transform.forward, out raycastHit, 4))
             {
+                Debug.Log("hitted");
                 GameObject speaker;
                 if (raycastHit.transform.tag == "Npc")
                 {
                     speaker = raycastHit.transform.GetComponent<GameObject>();
                     string file = speaker.name;
 
+                    file = file + ".txt";
 
+                    Debug.Log("npc" + file);
+
+                    if (file == dialogController.getFile())
+                    {
+                        print(4);
+                    }
+                    else {
+                        dialogController.setFile(file);
+                    }
                 }
             }
         }
