@@ -32,12 +32,17 @@ public class PlayerCharacter : MonoBehaviour
 
     private BuildingSystem buildingSystem;
 
+    [SerializeField] private GameObject dialogSystem;
+    private DialogController dialogController;
+
     private void Start()
     {
         slider.value = 100;
         buildingSystem = GetComponentInChildren<BuildingSystem>();
 
         gun = gameObject.transform.Find("Main Camera").Find("Gun").gameObject;
+
+        dialogController = dialogSystem.GetComponent<DialogController>();
     }
 
     public void setLife(int life)
@@ -96,6 +101,22 @@ public class PlayerCharacter : MonoBehaviour
                     objectTake.Die();
 
                     gun.GetComponent<Launcher>().addAmmo(30);
+                }
+            }
+        }
+
+        if (Input.GetKeyDown(KeyCode.P))
+        {
+            RaycastHit raycastHit;
+            if (Physics.Raycast(camera.transform.position, camera.transform.forward, out raycastHit, 4))
+            {
+                GameObject speaker;
+                if (raycastHit.transform.tag == "Npc")
+                {
+                    speaker = raycastHit.transform.GetComponent<GameObject>();
+                    string file = speaker.name;
+
+
                 }
             }
         }

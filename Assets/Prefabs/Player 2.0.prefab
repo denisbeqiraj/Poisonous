@@ -78,7 +78,7 @@ GameObject:
   - component: {fileID: 666178268386131820}
   - component: {fileID: 666178268386131813}
   m_Layer: 11
-  m_Name: Player 2
+  m_Name: Player 2.0
   m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -178,6 +178,8 @@ MonoBehaviour:
   inventory: {fileID: 666178268386131820}
   slider: {fileID: 0}
   health: 100
+  dialogSystem: {fileID: 2685664995409008716, guid: 75267aa62a9de8440908b992cfb6c5ba,
+    type: 3}
 --- !u!114 &666178268386131822
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -238,7 +240,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b35937b6cdcba214d8ee377fce0daf12, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  zombie: {fileID: 1030331733787904820, guid: 53e680bb7efdbe24abb7c915509adfc4, type: 3}
+  zombie: {fileID: 6984106941037515757, guid: a8a933c529a206a45864a3433ce24816, type: 3}
 --- !u!1 &666178268391857337
 GameObject:
   m_ObjectHideFlags: 0

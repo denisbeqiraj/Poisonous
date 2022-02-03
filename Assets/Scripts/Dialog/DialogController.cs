@@ -39,12 +39,20 @@ public class DialogController : MonoBehaviour
     public void print(int numLines) {
         int i = 0;
 
-        while(i < numLines)
+        while(i < numLines && text != null)
         {
             text += reader.ReadLine();
             i++;
         }
 
-        textDialog.text = text;
+        if(text != null)
+        {
+            textDialog.enabled = true;
+            textDialog.text = text;
+        }
+        else
+        {
+            textDialog.enabled = false;
+        }  
     }
 }
