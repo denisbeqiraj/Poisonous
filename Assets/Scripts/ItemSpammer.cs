@@ -6,8 +6,14 @@ public class ItemSpammer : MonoBehaviour
 {
 
     [SerializeField] private GameObject bananaObj;
+    [SerializeField] private GameObject hamburgerObj;
+    [SerializeField] private GameObject weapon1Obj;
+    [SerializeField] private GameObject ammo1Obj;
     [SerializeField] private Terrain terrain;
     [SerializeField] private int numItems;
+
+    private static int numItemAvailable = 2;
+    private GameObject[] items = new GameObject[numItemAvailable];
 
     // Start is called before the first frame update
     void Start()
@@ -42,14 +48,22 @@ public class ItemSpammer : MonoBehaviour
         maxX = maxX - 10;
         maxZ = maxZ - 10;
 
+        items[0] = bananaObj;
+        items[1] = hamburgerObj;
+        /*items[2] = weapon1Obj;
+        items[3] = ammo1Obj;*/
 
-        for(int i=0; i<numItems; i++)
+        int rnd;
+
+        for (int i=0; i<numItems; i++)
         {
 
             pos.x = minX + Random.Range(0.0f, maxX);
             pos.z = minZ + Random.Range(0.0f, maxZ);
 
-            Instantiate(bananaObj, pos, Quaternion.identity);
+            rnd = (int)Random.Range(0.0f, numItemAvailable);
+
+            Instantiate(items[rnd], pos, Quaternion.identity);
         }
     }
 
