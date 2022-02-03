@@ -24,8 +24,14 @@ public class Launcher : MonoBehaviour
     private float _cooldown = 0f;
     private float _cooldownTimer = 5f;
     private bool _canShoot = false;
+    
+    
     private int totalAmmo = 0;
     private int weaponMagazine = 0;
+
+    public UnityEngine.UI.Slider sliderMagazine;
+    public UnityEngine.UI.Text textAmmo;
+
     private uint _shotCounter = 0;
     private float _launcherPitch;
 
@@ -105,6 +111,11 @@ public class Launcher : MonoBehaviour
             _canShoot = false;
         }
 
+        if (Input.GetKeyDown(KeyCode.R))
+        {
+            reload(30);
+        }
+
         // Input has been put outside cooldown check so we can do something else if character cannot shoot, for example display something or reproduce a sound
         if (
             (Input.GetMouseButtonDown(0)
@@ -152,6 +163,9 @@ public class Launcher : MonoBehaviour
         }
 
         transform.localRotation = Quaternion.Euler(0, 0, 0);
+
+        textAmmo.text = "" + (totalAmmo);
+        sliderMagazine.value = weaponMagazine;
         
     }
 
@@ -162,9 +176,9 @@ public class Launcher : MonoBehaviour
 
     void reload(int number)
     {
-        if(totalAmmo < number)
+        if(totalAmmo < (number - weaponMagazine))
         {
-            weaponMagazine = totalAmmo;
+            weaponMagazine += totalAmmo;
             totalAmmo = 0;
         }
         else
@@ -172,5 +186,7 @@ public class Launcher : MonoBehaviour
             totalAmmo -= (number - weaponMagazine);
             weaponMagazine = number;
         }
+
+        _cooldownTimer = 5.0f;
     }
 }
