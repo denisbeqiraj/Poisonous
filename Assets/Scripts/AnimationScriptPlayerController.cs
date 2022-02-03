@@ -61,7 +61,7 @@ public class AnimationScriptPlayerController : MonoBehaviour
 
         bool leftShiftPress = Input.GetKey("left shift");
 
-        if (forwardPress)
+        if (forwardPress && !isJump)
         {
             if (isRunning)
             {
