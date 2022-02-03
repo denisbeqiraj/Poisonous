@@ -8,7 +8,6 @@ public class Shot : MonoBehaviour
     private float speed = 20.0f;
     public Vector3 direction;
     public float lifeTime = 10.0f;
-    public GameObject explosion;
     public GameObject throwElement;
 
     private Rigidbody _rigidbody;
@@ -55,10 +54,6 @@ public class Shot : MonoBehaviour
         _rigidbody.detectCollisions = false;
         _rigidbody.collisionDetectionMode = CollisionDetectionMode.ContinuousSpeculative;
         _rigidbody.isKinematic = true;
-        if (explosion)
-        {
-            explosion.SetActive(true);
-        }
         yield return new WaitForSeconds(time);
         Destroy(throwElement);
         Destroy(gameObject);
