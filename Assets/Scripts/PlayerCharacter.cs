@@ -36,6 +36,9 @@ public class PlayerCharacter : MonoBehaviour
     private DialogController dialogController;
 
     private bool canSpawn = false;
+
+    public UnityEngine.UI.Text textPieces;
+    private int pieces = 0;
     private void Start()
     {
         slider.value = 100;
@@ -103,6 +106,15 @@ public class PlayerCharacter : MonoBehaviour
 
                     gun.GetComponent<Launcher>().addAmmo(30);
                 }
+                else if (raycastHit.transform.tag == "Pieces")
+                {
+                    objectTake = raycastHit.transform.GetComponent<ObjectTake>();
+                    inventory.Add(objectTake.name);
+                    objectTake.Die();
+
+                    pieces += 1;
+                    textPieces.text = "" + pieces;
+                }
             }
         }
 
@@ -137,6 +149,11 @@ public class PlayerCharacter : MonoBehaviour
                 }
             }
         }
+    }
+
+    public int getPieces()
+    {
+        return pieces;
     }
 
 }
