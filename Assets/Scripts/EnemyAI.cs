@@ -55,7 +55,7 @@ public class EnemyAI : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Vector3.Magnitude(transform.position - player[0].transform.position) < 10 && target.getIsAlive())
+        if (Vector3.Magnitude(transform.position - player[0].transform.position) < 50 && target.getIsAlive())
         {
             navMesh.isStopped = false;
             navMesh.destination = player[0].transform.position;
