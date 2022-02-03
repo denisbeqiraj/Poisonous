@@ -3999,9 +3999,59 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3252555444010640609, guid: a8a933c529a206a45864a3433ce24816,
         type: 3}
+      propertyPath: sharedStats
+      value: 
+      objectReference: {fileID: 914456043}
+    - target: {fileID: 3252555444010640609, guid: a8a933c529a206a45864a3433ce24816,
+        type: 3}
       propertyPath: zombieSoundSource
       value: 
       objectReference: {fileID: 12564403}
+    - target: {fileID: 3252555444532133942, guid: a8a933c529a206a45864a3433ce24816,
+        type: 3}
+      propertyPath: m_ConnectedAnchor.x
+      value: -0.39292157
+      objectReference: {fileID: 0}
+    - target: {fileID: 3252555444532133942, guid: a8a933c529a206a45864a3433ce24816,
+        type: 3}
+      propertyPath: m_ConnectedAnchor.y
+      value: -0.0000000013969839
+      objectReference: {fileID: 0}
+    - target: {fileID: 3252555444532133942, guid: a8a933c529a206a45864a3433ce24816,
+        type: 3}
+      propertyPath: m_ConnectedAnchor.z
+      value: -0.000011742115
+      objectReference: {fileID: 0}
+    - target: {fileID: 3252555444581689608, guid: a8a933c529a206a45864a3433ce24816,
+        type: 3}
+      propertyPath: m_ConnectedAnchor.x
+      value: -0.3928845
+      objectReference: {fileID: 0}
+    - target: {fileID: 3252555444581689608, guid: a8a933c529a206a45864a3433ce24816,
+        type: 3}
+      propertyPath: m_ConnectedAnchor.y
+      value: 0.000000009778887
+      objectReference: {fileID: 0}
+    - target: {fileID: 3252555444581689608, guid: a8a933c529a206a45864a3433ce24816,
+        type: 3}
+      propertyPath: m_ConnectedAnchor.z
+      value: -0.000007934868
+      objectReference: {fileID: 0}
+    - target: {fileID: 3252555445800443773, guid: a8a933c529a206a45864a3433ce24816,
+        type: 3}
+      propertyPath: m_ConnectedAnchor.x
+      value: -0.27129617
+      objectReference: {fileID: 0}
+    - target: {fileID: 3252555445800443773, guid: a8a933c529a206a45864a3433ce24816,
+        type: 3}
+      propertyPath: m_ConnectedAnchor.y
+      value: -0.02382294
+      objectReference: {fileID: 0}
+    - target: {fileID: 3252555445800443773, guid: a8a933c529a206a45864a3433ce24816,
+        type: 3}
+      propertyPath: m_ConnectedAnchor.z
+      value: 0.22824183
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a8a933c529a206a45864a3433ce24816, type: 3}
 --- !u!1001 &307968806
@@ -28041,6 +28091,11 @@ PrefabInstance:
       propertyPath: terrain
       value: 
       objectReference: {fileID: 521729487}
+    - target: {fileID: 537658650111425394, guid: 9872af24f1d4a7c46929d0f4a4ad9a5b,
+        type: 3}
+      propertyPath: sharedStats
+      value: 
+      objectReference: {fileID: 914456043}
     - target: {fileID: 537658650111425395, guid: 9872af24f1d4a7c46929d0f4a4ad9a5b,
         type: 3}
       propertyPath: m_Name
@@ -29810,6 +29865,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   soundSource: {fileID: 74060843}
   shotAudio: {fileID: 8300000, guid: f2c0e5cc1d3ba214586a61c43f4de704, type: 3}
+  sharedStats: {fileID: 914456043}
   fireRateSeconds: 5
   shot: {fileID: 7698680340343405464, guid: 6657a9c67ca4357479a87ae274798a1e, type: 3}
   shootSpeed: 200
