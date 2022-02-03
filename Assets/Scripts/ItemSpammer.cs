@@ -7,12 +7,11 @@ public class ItemSpammer : MonoBehaviour
 
     [SerializeField] private GameObject bananaObj;
     [SerializeField] private GameObject hamburgerObj;
-    [SerializeField] private GameObject weapon1Obj;
-    [SerializeField] private GameObject ammo1Obj;
+    [SerializeField] private GameObject ammoObj;
     [SerializeField] private Terrain terrain;
     [SerializeField] private int numItems;
 
-    private static int numItemAvailable = 2;
+    private static int numItemAvailable = 3;
     private GameObject[] items = new GameObject[numItemAvailable];
 
     // Start is called before the first frame update
@@ -50,8 +49,7 @@ public class ItemSpammer : MonoBehaviour
 
         items[0] = bananaObj;
         items[1] = hamburgerObj;
-        /*items[2] = weapon1Obj;
-        items[3] = ammo1Obj;*/
+        items[2] = ammoObj;
 
         int rnd;
 
