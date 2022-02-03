@@ -132,6 +132,8 @@ public class PlayerCharacter : MonoBehaviour
                     {
                         canSpawn = true;
                         gameObject.GetComponent<EnemySpawner>().startRepeating();
+
+                        gun.GetComponent<Launcher>().addAmmo(30);
                     }
                 }
             }

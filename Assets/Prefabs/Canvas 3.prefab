@@ -1502,4 +1502,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Go in the city and talk with npc, that he gives you all informations
+  m_Text: 'You can move with wasd, use them to go to the city.
+
+    Use p to talk
+    with npc and listen their stories.'

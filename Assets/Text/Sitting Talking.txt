@@ -1,5 +1,31 @@
-Questa è una
-sempliccisima
-prova
-prov
-pr
+Hi, my name is Denis.
+I am an habitant of this island, one of the few left.
+It was a day like any others, when a virus attacked us.
+People started turning into zombies and it became a war zone.
+Speaking of you...
+I saw you crashed with that plane, you look like the only survivor.
+During the flight I noticed that the plane was losing pieces,
+they looked like antennas.
+It may have been the problem.
+Searching the island you might find the pieces to go home.
+But beware that it is full of zombies ready to do anything to eat you.
+
+Tutorial:
+-wasd, move player
+-p, talk npc
+-e, switch build system
+-1/2/3, switch weapons/builds
+-r, recharge
+-mouse left, shot, build
+-left shift, run
+-v, take items
+-f, swith first/third person
+-space, jump
+
+You can take 2 different type of items:
+-food, gives you life
+-ammo, gives you ammo for shooting
+
+There is one piece of antenna in the woods, search it and then go in the other village.
+Keep this ammo and...
+Good luck.
