@@ -22903,6 +22903,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bananaObj: {fileID: 5821771594237460261, guid: 82fede9a33e894643b2062b502a38558,
     type: 3}
+  hamburgerObj: {fileID: 6843075430104661263, guid: 3d4e7da7acb68df4680dad67e18bc2c9,
+    type: 3}
+  weapon1Obj: {fileID: 0}
+  ammo1Obj: {fileID: 0}
   terrain: {fileID: 521729487}
   numItems: 5000
 --- !u!4 &2053067894

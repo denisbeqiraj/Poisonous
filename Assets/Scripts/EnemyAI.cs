@@ -42,26 +42,27 @@ public class EnemyAI : MonoBehaviour
 
         Vector3 pos = new Vector3(head.transform.position.x, head.transform.position.y, head.transform.position.z);
 
-        if (Physics.Raycast(pos, transform.forward, out raycastHit, 10))
+        if (Physics.Raycast(pos, transform.forward, out raycastHit, 1))
         {
-            hitted(raycastHit);
+            StartCoroutine(hitted(raycastHit));
         }
         else{
             pos = new Vector3(leg.transform.position.x, leg.transform.position.y, leg.transform.position.z);
 
-            if (Physics.Raycast(pos, transform.forward, out raycastHit, 10))
+            if (Physics.Raycast(pos, transform.forward, out raycastHit, 1))
             {
-                hitted(raycastHit);
+                StartCoroutine(hitted(raycastHit));
             }
         }
     }
 
-    private void hitted(RaycastHit raycastHit)
+    private IEnumerator hitted(RaycastHit raycastHit)
     {
         if (raycastHit.transform.tag.Equals("Player"))
         {
-            Debug.Log("Player");
             TargetBehaviour player = raycastHit.transform.GetComponent<TargetBehaviour>();
+
+            yield return new WaitForSeconds(3);
 
             player.Hit(10);
 
@@ -70,6 +71,8 @@ public class EnemyAI : MonoBehaviour
         if (raycastHit.transform.tag.Contains("Build"))
         {
             BuildHittable build = raycastHit.transform.GetComponent<BuildHittable>();
+
+            yield return new WaitForSeconds(3);
 
             build.hit(30);
         }
