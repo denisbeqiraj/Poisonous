@@ -1012,7 +1012,7 @@ MonoBehaviour:
   animator: {fileID: 0}
   head: {fileID: 922923876}
   leg: {fileID: 1856759038}
-  zombieSoundSource: {fileID: 1742430217283254338, guid: 36a00848d6b96624bb863897bc0151c4,
+  zombieSoundSource: {fileID: 5153519745504376703, guid: 36a00848d6b96624bb863897bc0151c4,
     type: 3}
   zombieAudioClip: {fileID: 8300000, guid: 672dc66daf54c9143b051f9a9d5e0eac, type: 3}
   projectile: {fileID: 4060692265583551329, guid: 2e31062dcb6f6e74788fa5c51a01258d,

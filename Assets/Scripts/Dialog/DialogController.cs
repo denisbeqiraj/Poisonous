@@ -33,10 +33,10 @@ public class DialogController : MonoBehaviour
 
         theSourceFile = new FileInfo(file);
         reader = theSourceFile.OpenText();
-        print(numLines);
+        printLines(numLines);
     }
 
-    public void print(int numLines) {
+    public void printLines(int numLines) {
         int i = 0;
 
         while(i < numLines && text != null)

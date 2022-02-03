@@ -43,6 +43,7 @@ public class PlayerCharacter : MonoBehaviour
         gun = gameObject.transform.Find("Main Camera").Find("Gun").gameObject;
 
         dialogController = dialogSystem.GetComponent<DialogController>();
+        Debug.Log(dialogController);
     }
 
     public void setLife(int life)
@@ -110,22 +111,23 @@ public class PlayerCharacter : MonoBehaviour
             RaycastHit raycastHit;
             if (Physics.Raycast(camera.transform.position, camera.transform.forward, out raycastHit, 4))
             {
-                Debug.Log("hitted");
                 GameObject speaker;
                 if (raycastHit.transform.tag == "Npc")
                 {
-                    speaker = raycastHit.transform.GetComponent<GameObject>();
+                    speaker = raycastHit.transform.gameObject;
                     string file = speaker.name;
 
                     file = file + ".txt";
 
-                    Debug.Log("npc" + file);
+                    Debug.Log(file);
+                    Debug.Log(dialogController.getFile());
 
                     if (file == dialogController.getFile())
                     {
-                        print(4);
+                        dialogController.printLines(4);
                     }
                     else {
+                        Debug.Log(dialogController.getFile());
                         dialogController.setFile(file);
                     }
                 }

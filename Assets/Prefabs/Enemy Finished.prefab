@@ -3271,7 +3271,8 @@ MonoBehaviour:
   animator: {fileID: 0}
   head: {fileID: 7971636333953067965}
   leg: {fileID: 7971636334600649767}
-  zombieSoundSource: {fileID: 0}
+  zombieSoundSource: {fileID: 5153519745504376703, guid: 36a00848d6b96624bb863897bc0151c4,
+    type: 3}
   zombieAudioClip: {fileID: 8300000, guid: 672dc66daf54c9143b051f9a9d5e0eac, type: 3}
   projectile: {fileID: 0}
 --- !u!1 &7235436870970299636
