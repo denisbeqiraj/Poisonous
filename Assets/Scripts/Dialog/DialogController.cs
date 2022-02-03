@@ -22,7 +22,7 @@ public class DialogController : MonoBehaviour
     {
         /*var sr = File.CreateText("Search.txt");
         sr.WriteLine("This is my file.");*/
-        textDialog.enabled = false;
+        //textDialog.enabled = false;
     }
 
     // Update is called once per frame
@@ -68,9 +68,9 @@ public class DialogController : MonoBehaviour
         }  
     }
 
-    public Boolean isReaderNull()
+    public Boolean isFileNull()
     {
-        return reader == null ? true : false;
+        return file == null ? true : false;
     }
 
     public string getFile()

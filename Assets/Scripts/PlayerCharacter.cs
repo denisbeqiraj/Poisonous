@@ -35,6 +35,8 @@ public class PlayerCharacter : MonoBehaviour
     [SerializeField] private GameObject dialogSystem;
     private DialogController dialogController;
 
+    private bool canSpawn = false;
+
     private void Start()
     {
         slider.value = 100;
@@ -124,6 +126,12 @@ public class PlayerCharacter : MonoBehaviour
                     }
                     else {
                         dialogController.setFile(file);
+                    }
+
+                    if (!canSpawn && dialogController.isFileNull())
+                    {
+                        canSpawn = true;
+                        gameObject.GetComponent<EnemySpawner>().startRepeating();
                     }
                 }
             }
