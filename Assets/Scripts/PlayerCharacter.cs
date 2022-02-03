@@ -79,7 +79,7 @@ public class PlayerCharacter : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.V))
         {
             RaycastHit raycastHit;
-            if (Physics.Raycast(camera.transform.position, camera.transform.forward, out raycastHit, 5))
+            if (Physics.Raycast(camera.transform.position, camera.transform.forward, out raycastHit, 4))
             {
                 ObjectTake objectTake;
                 if (raycastHit.transform.tag == "Food")

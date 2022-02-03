@@ -98,17 +98,15 @@ public class Launcher : MonoBehaviour
         }
         if (_cooldownTimer <= 0f)
         {
-            _canShoot = true;
-        }
-
-        if(weaponMagazine > 0)
-        {
-            _canShoot = true;
-        }
-        else
-        {
-            reload(30);
-            _canShoot = false;
+            if (weaponMagazine > 0)
+            {
+                _canShoot = true;
+            }
+            else
+            {
+                reload(30);
+                _canShoot = false;
+            }
         }
 
         if (Input.GetKeyDown(KeyCode.R))
@@ -187,6 +185,6 @@ public class Launcher : MonoBehaviour
             weaponMagazine = number;
         }
 
-        _cooldownTimer = 5.0f;
+        _cooldownTimer = 1.5f;
     }
 }
