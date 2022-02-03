@@ -2,12 +2,15 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class MenuController : MonoBehaviour
 {
     public GameObject options;
     public GameObject settings;
     public GameObject help;
+
+    private string difficulty = "EASY";
 
     public void loadScene(string scene)
     {
@@ -46,8 +49,25 @@ public class MenuController : MonoBehaviour
         }
     }
 
+    public void changeDifficulty()
+    {
+        GameObject difficultyButton = settings.transform.Find("DifficultyButton").gameObject;
+
+        if (difficultyButton.GetComponentInChildren<Text>().text == "EASY")
+        {
+            difficulty = "HARD";
+        }
+        else
+        {
+            difficulty = "EASY";
+        }
+
+        difficultyButton.GetComponentInChildren<Text>().text = difficulty;
+    }
+
     public void quit()
     {
+        //working only in (.exe) game
         Application.Quit();
     }
 }

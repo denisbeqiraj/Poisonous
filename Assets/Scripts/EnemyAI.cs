@@ -74,7 +74,9 @@ public class EnemyAI : MonoBehaviour
 
             yield return new WaitForSeconds(3);
 
-            build.hit(30);
+            if(build != null) {
+                build.hit(30);
+            }
         }
     }
 
