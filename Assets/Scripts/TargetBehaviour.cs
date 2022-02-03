@@ -54,6 +54,16 @@ public class TargetBehaviour : MonoBehaviour
         }
     }
 
+    public void addLife(int life)
+    {
+        health += life;
+
+        if (gameObject.tag == "Player")
+        {
+            gameObject.GetComponent<PlayerCharacter>().setLife(health);
+        }
+    }
+
     public IEnumerator DieEnemy()
     {
         isAlive = false;

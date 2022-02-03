@@ -74,13 +74,18 @@ public class PlayerCharacter : MonoBehaviour
         controller.Move(velocity * Time.deltaTime);
         if (Input.GetKeyDown(KeyCode.V))
         {
-            EnemySpawner spawner = GetComponent<EnemySpawner>();
             RaycastHit raycastHit;
             if (Physics.Raycast(camera.transform.position, camera.transform.forward, out raycastHit, 1000))
             {
-                spawner.spawnEnemy();
                 ObjectTake objectTake;
-                if (raycastHit.transform.tag == "Object")
+                if (raycastHit.transform.tag == "Food")
+                {
+                    objectTake = raycastHit.transform.GetComponent<ObjectTake>();
+                    inventory.Add(objectTake.name);
+                    objectTake.Die();
+
+                    gameObject.GetComponent<TargetBehaviour>().addLife(10);
+                }else if(raycastHit.transform.tag == "Ammo")
                 {
                     objectTake = raycastHit.transform.GetComponent<ObjectTake>();
                     inventory.Add(objectTake.name);
