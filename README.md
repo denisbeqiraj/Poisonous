@@ -17,3 +17,4 @@
 # NPC
 # Dialogue system
 # Efficienza
+# si spara addosso in terza persona 

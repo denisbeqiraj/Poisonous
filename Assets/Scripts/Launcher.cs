@@ -105,10 +105,13 @@ public class Launcher : MonoBehaviour
                 _cooldownTimer = _cooldown;
                 RaycastHit raycastHit;
 
-                Vector3 pos = new Vector3(camera.transform.position.x, camera.transform.position.y, shotSpawn.position.z);
+                Vector3 pos = new Vector3(shotSpawn.position.x, shotSpawn.position.y, shotSpawn.position.z);
 
-                if (Physics.Raycast(pos, shotSpawn.transform.forward, out raycastHit, 1000))
+                if (Physics.Raycast(pos, camera.transform.forward, out raycastHit, 1000))
                 {
+                    Debug.DrawRay(pos, camera.transform.forward, Color.green);
+
+
                     TargetBehaviour enemy;
                     if (raycastHit.transform.tag == "Enemy")
                     {

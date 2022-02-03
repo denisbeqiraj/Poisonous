@@ -4,8 +4,11 @@ using UnityEngine;
 
 public class AnimationScriptPlayerController : MonoBehaviour
 {
-    [SerializeField] private AudioSource soundSource;
-    [SerializeField] private AudioClip audioSteps;
+    [SerializeField] private AudioSource runningSoundSource;
+    [SerializeField] private AudioClip runningAudioClip;
+
+    [SerializeField] private AudioSource walkingSoundSource;
+    [SerializeField] private AudioClip walkingAudioClip;
 
     Animator animator;
     int isWalkingHash;
@@ -60,10 +63,21 @@ public class AnimationScriptPlayerController : MonoBehaviour
 
         if (forwardPress)
         {
-            if (!soundSource.isPlaying)
+            if (isRunning)
             {
-                soundSource.PlayOneShot(audioSteps);
+                if (!runningSoundSource.isPlaying)
+                {
+                    runningSoundSource.PlayOneShot(runningAudioClip);
+                }
             }
+            else
+            {
+                if (!walkingSoundSource.isPlaying)
+                {
+                    walkingSoundSource.PlayOneShot(walkingAudioClip);
+                }
+            }
+            
         }
 
         if (!isWalking && forwardPress)
