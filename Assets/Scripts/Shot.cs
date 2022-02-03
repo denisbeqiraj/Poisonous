@@ -5,22 +5,24 @@ using UnityEngine;
 [RequireComponent(typeof(Rigidbody))]
 public class Shot : MonoBehaviour
 {
-    public float speed = 1.0f;
+    private float speed = 20.0f;
     public Vector3 direction;
-    public float lifeTime = 5.0f;
+    public float lifeTime = 10.0f;
     public GameObject explosion;
+    public GameObject throwElement;
 
     private Rigidbody _rigidbody;
     void Awake()
     {
         _rigidbody = gameObject.GetComponent<Rigidbody>();
+        throwElement=Instantiate(throwElement, transform.position, transform.rotation);
     }
 
     // Start is called before the first frame update
     void Start()
     {
         // start with explosive velocity, also called impulse
-        _rigidbody.AddForce(direction * speed, ForceMode.VelocityChange);
+        _rigidbody.AddForce(gameObject.transform.forward * speed, ForceMode.VelocityChange);
     }
 
     void Update()
@@ -32,10 +34,16 @@ public class Shot : MonoBehaviour
             // Destroy whole gameobject, if "this" is being used instead of gameObject -> then only this script (MonoBehaviour) will be destroyed
             StartCoroutine(DestroyRoutine(0.3f));
         }
+        throwElement.transform.position = gameObject.transform.position;
     }
 
     void OnCollisionEnter(Collision collision)
     {
+        if (collision.gameObject.name == "Player")
+        {
+            TargetBehaviour targetBehaviour=collision.gameObject.GetComponent<TargetBehaviour>();
+            targetBehaviour.Hit(20);
+        }
         StartCoroutine(DestroyRoutine(0.3f));
     }
 
@@ -52,6 +60,7 @@ public class Shot : MonoBehaviour
             explosion.SetActive(true);
         }
         yield return new WaitForSeconds(time);
+        Destroy(throwElement);
         Destroy(gameObject);
     }
 }

@@ -44,9 +44,10 @@ public class EnemyAI : MonoBehaviour
             navMesh.isStopped = false;
             navMesh.destination = player[0].transform.position;
             animator.SetBool("isRun", true);
-            if (isThrow)
+            if (isThrow && timeRemaining <= 0)
             {
-
+                timeRemaining = 3;
+                Instantiate(projectile, gameObject.transform.position+new Vector3(0,1,0) + gameObject.transform.forward*3, gameObject.transform.rotation);
             }
         }
         else
