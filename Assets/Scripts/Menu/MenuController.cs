@@ -7,6 +7,7 @@ using UnityEngine.UI;
 public class MenuController : MonoBehaviour
 {
     public GameObject options;
+    public GameObject newGame;
     public GameObject settings;
     public GameObject help;
 
@@ -21,6 +22,11 @@ public class MenuController : MonoBehaviour
     {
         switch (name)
         {
+            case "NewGame":
+                options.SetActive(false);
+                newGame.SetActive(true);
+                break;
+
             case "Settings":
                 options.SetActive(false);
                 settings.SetActive(true);
@@ -37,6 +43,11 @@ public class MenuController : MonoBehaviour
     {
         switch (name)
         {
+            case "NewGame":
+                newGame.SetActive(false);
+                options.SetActive(true);
+                break;
+
             case "Settings":
                 settings.SetActive(false);
                 options.SetActive(true);
