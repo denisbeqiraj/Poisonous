@@ -113,7 +113,7 @@ public class PlayerCharacter : MonoBehaviour
                 GameObject speaker;
                 if (raycastHit.transform.tag == "Npc")
                 {
-                    /*speaker = raycastHit.transform.gameObject;
+                    speaker = raycastHit.transform.gameObject;
                     string file = speaker.name;
 
                     file = file + ".txt";
@@ -123,13 +123,11 @@ public class PlayerCharacter : MonoBehaviour
 
                     if (file.Equals(dialogController.getFile()))
                     {
-                        dialogController.printLines(4);
+                        dialogController.talk(4);
                     }
                     else {
                         dialogController.setFile(file);
-                    }*/
-
-                    dialogController.talk(4);
+                    }
                 }
             }
         }

@@ -44,16 +44,15 @@ public class DialogController : MonoBehaviour
     public void talk(int numLines) {
         int i = 0;
 
-        /*while(i < numLines && text != null)
+        while(i < numLines && text != null)
         {
             text += reader.ReadLine();
             i++;
-        }*/
+        }
 
-        text = "PPPPPPPPPPPPPPPPPPPPPPPPPPP\ndadad";
         textDialog.text = text;
 
-        /*if(text != null)
+        if (text != null)
         {
             textDialog.enabled = true;
             textDialog.text = text;
@@ -63,7 +62,7 @@ public class DialogController : MonoBehaviour
         {
             textDialog.enabled = false;
             file = "";
-        }*/  
+        }
     }
 
     public Boolean isReaderNull()
