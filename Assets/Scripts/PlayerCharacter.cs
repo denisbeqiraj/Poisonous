@@ -44,10 +44,6 @@ public class PlayerCharacter : MonoBehaviour
         gun = gameObject.transform.Find("Main Camera").Find("Gun").gameObject;
 
         dialogController = dialogSystem.GetComponent<DialogController>();
-        if (GameObject.Find("Warrok"))
-        {
-            Debug.Log("ciao");
-        }
     }
 
     public void setLife(int life)

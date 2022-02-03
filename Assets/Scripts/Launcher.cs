@@ -55,6 +55,11 @@ public class Launcher : MonoBehaviour
         weapon[0].SetActive(true);
         weapon[1].SetActive(false);
         weapon[2].SetActive(false);
+
+        if (GameObject.Find("Warrok"))
+        {
+            addAmmo(AmmoSingleton.total);
+        }
     }
     void Start()
     {

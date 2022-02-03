@@ -5,7 +5,7 @@ using UnityEngine;
 public class AmmoSingleton : MonoBehaviour
 {
     public static AmmoSingleton instance;
-    public int total;
+    public static int total;
     public GameObject gunAmmo;
     // Start is called before the first frame update
     void Start()
