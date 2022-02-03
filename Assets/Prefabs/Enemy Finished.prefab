@@ -1012,6 +1012,9 @@ MonoBehaviour:
   animator: {fileID: 0}
   head: {fileID: 922923876}
   leg: {fileID: 1856759038}
+  zombieSoundSource: {fileID: 1742430217283254338, guid: 36a00848d6b96624bb863897bc0151c4,
+    type: 3}
+  zombieAudioClip: {fileID: 8300000, guid: 73c8c5567dff0024f9207ba29c7feb7f, type: 3}
 --- !u!1001 &6337996030153202948
 PrefabInstance:
   m_ObjectHideFlags: 0
