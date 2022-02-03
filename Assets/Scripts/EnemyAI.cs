@@ -11,7 +11,6 @@ public class EnemyAI : MonoBehaviour
     private float timeRemaining = -1;
     [SerializeField] private GameObject head;
     [SerializeField] private GameObject leg;
-
     // Start is called before the first frame update
     void Start()
     {
@@ -98,6 +97,7 @@ public class EnemyAI : MonoBehaviour
     {
         RaycastHit[] hits;
         hits = Physics.RaycastAll(transform.position, Vector3.down, 1000);
+
         for (int i = 0; i < hits.Length; i++)
         {
             RaycastHit hit = hits[i];
@@ -106,6 +106,7 @@ public class EnemyAI : MonoBehaviour
                 Destroy(gameObject);
             }
         }
+
     }
 
     /*private void OnCollisionEnter(Collision collision)

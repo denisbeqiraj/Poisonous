@@ -11,6 +11,7 @@ public class TargetBehaviour : MonoBehaviour
     public Collider[] allColliders;
     public Animator animator;
     public int health;
+    public GameObject ammo;
 
     [SerializeField] private MenuController menuController;
     void Awake()
@@ -67,6 +68,7 @@ public class TargetBehaviour : MonoBehaviour
     public IEnumerator DieEnemy()
     {
         isAlive = false;
+        Instantiate(ammo, gameObject.transform.position, Quaternion.Euler(new Vector3(Random.Range(0, 360), 0, 0)));
         yield return new WaitForSeconds(5.0f);
         Destroy(gameObject);
     }
