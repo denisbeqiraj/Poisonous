@@ -8,7 +8,7 @@ public class EnemyAI : MonoBehaviour
     public GameObject[] player;
     private TargetBehaviour target;
     public Animator animator;
-
+    private float timeRemaining = -1;
     [SerializeField] private GameObject head;
     [SerializeField] private GameObject leg;
 
@@ -49,38 +49,48 @@ public class EnemyAI : MonoBehaviour
 
         if (Physics.Raycast(pos, transform.forward, out raycastHit, 1))
         {
-            StartCoroutine(hitted(raycastHit));
+            hitted(raycastHit);
         }
         else{
             pos = new Vector3(leg.transform.position.x, leg.transform.position.y, leg.transform.position.z);
 
             if (Physics.Raycast(pos, transform.forward, out raycastHit, 1))
             {
-                StartCoroutine(hitted(raycastHit));
+                hitted(raycastHit);
             }
+        }
+        Debug.Log(timeRemaining);
+
+        if (timeRemaining > 0)
+        {
+            timeRemaining -= Time.deltaTime;
         }
     }
 
-    private IEnumerator hitted(RaycastHit raycastHit)
+    private void hitted(RaycastHit raycastHit)
     {
         if (raycastHit.transform.tag.Equals("Player"))
         {
-            TargetBehaviour player = raycastHit.transform.GetComponent<TargetBehaviour>();
-
-            yield return new WaitForSeconds(3);
-
-            player.Hit(10);
-
+            if (timeRemaining <= 0)
+            {
+                timeRemaining = 3;
+                TargetBehaviour player = raycastHit.transform.GetComponent<TargetBehaviour>();
+                player.Hit(10);
+            }
         }
 
         if (raycastHit.transform.tag.Contains("Build"))
         {
-            BuildHittable build = raycastHit.transform.GetComponent<BuildHittable>();
+            if (timeRemaining <= 0)
+            {
+                timeRemaining = 3;
+                BuildHittable build = raycastHit.transform.GetComponent<BuildHittable>();
 
-            yield return new WaitForSeconds(3);
 
-            if(build != null) {
-                build.hit(30);
+                if (build != null)
+                {
+                    build.hit(30);
+                }
             }
         }
     }

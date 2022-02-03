@@ -32,8 +32,13 @@ public class PlayerCharacter : MonoBehaviour
 
     private void Start()
     {
-        slider.value = health;
+        slider.value = 100;
         buildingSystem = GetComponentInChildren<BuildingSystem>();
+    }
+
+    public void setLife(int life)
+    {
+        slider.value = life;
     }
 
     void Update()

@@ -43,10 +43,14 @@ public class TargetBehaviour : MonoBehaviour
     public void Hit(int damage)
     {
         health = health - damage;
+       
+        if (gameObject.tag == "Player")
+        {
+            gameObject.GetComponent<PlayerCharacter>().setLife(health);
+        }
         if (health <= 0)
         {
             Die();
-            Debug.Log(gameObject.tag + " die");
         }
     }
 
