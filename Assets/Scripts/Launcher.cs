@@ -187,4 +187,9 @@ public class Launcher : MonoBehaviour
 
         _cooldownTimer = 1.5f;
     }
+
+    public int getTotal()
+    {
+        return totalAmmo + weaponMagazine;
+    }
 }
