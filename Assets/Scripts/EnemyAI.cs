@@ -12,6 +12,10 @@ public class EnemyAI : MonoBehaviour
     private float timeRemaining = -1;
     [SerializeField] private GameObject head;
     [SerializeField] private GameObject leg;
+
+    [SerializeField] private AudioSource zombieSoundSource;
+    [SerializeField] private AudioClip zombieAudioClip;
+
     private bool isThrow;
     public GameObject projectile;
     // Start is called before the first frame update
