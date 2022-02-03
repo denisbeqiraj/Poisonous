@@ -22,7 +22,6 @@ public class DialogController : MonoBehaviour
     {
         /*var sr = File.CreateText("Search.txt");
         sr.WriteLine("This is my file.");*/
-        textDialog.text = "Salve";
     }
 
     // Update is called once per frame
@@ -46,7 +45,7 @@ public class DialogController : MonoBehaviour
 
         while(i < numLines && text != null)
         {
-            text += reader.ReadLine();
+            text += reader.ReadLine() + '\n';
             i++;
         }
 

@@ -118,9 +118,6 @@ public class PlayerCharacter : MonoBehaviour
 
                     file = file + ".txt";
 
-                    Debug.Log(file);
-                    Debug.Log(dialogController.getFile());
-
                     if (file.Equals(dialogController.getFile()))
                     {
                         dialogController.talk(4);
