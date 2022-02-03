@@ -23194,7 +23194,7 @@ MonoBehaviour:
     type: 3}
   ammoObj: {fileID: 5821771594237460261, guid: 3e6a35379663c994bb03fe2e576b8eed, type: 3}
   terrain: {fileID: 521729487}
-  numItems: 9000
+  numItems: 5000
 --- !u!4 &2053067894
 Transform:
   m_ObjectHideFlags: 0
