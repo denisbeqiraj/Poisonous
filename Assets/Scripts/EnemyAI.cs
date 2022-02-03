@@ -59,7 +59,6 @@ public class EnemyAI : MonoBehaviour
                 hitted(raycastHit);
             }
         }
-        Debug.Log(timeRemaining);
 
         if (timeRemaining > 0)
         {

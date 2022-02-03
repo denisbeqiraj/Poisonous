@@ -22,7 +22,7 @@ public class Launcher : MonoBehaviour
     public bool invertPitchAxis = false;
     public Camera camera;
     private float _cooldown = 0f;
-    private float _cooldownTimer = 0f;
+    private float _cooldownTimer = 5f;
     private bool _canShoot = false;
     private int totalAmmo = 0;
     private int weaponMagazine = 0;
@@ -102,6 +102,7 @@ public class Launcher : MonoBehaviour
         else
         {
             reload(30);
+            _canShoot = false;
         }
 
         // Input has been put outside cooldown check so we can do something else if character cannot shoot, for example display something or reproduce a sound
@@ -113,7 +114,6 @@ public class Launcher : MonoBehaviour
             if (shot && _canShoot)
             {
                 weaponMagazine -= 1;
-                Debug.Log("total " + totalAmmo + " weapon " + weaponMagazine);
 
                 // reset cooldown
                 _cooldownTimer = _cooldown;

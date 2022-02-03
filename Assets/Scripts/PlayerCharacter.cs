@@ -28,12 +28,16 @@ public class PlayerCharacter : MonoBehaviour
 
     public int health=100;
 
+    private GameObject gun;
+
     private BuildingSystem buildingSystem;
 
     private void Start()
     {
         slider.value = 100;
         buildingSystem = GetComponentInChildren<BuildingSystem>();
+
+        gun = gameObject.transform.Find("Main Camera").Find("Gun").gameObject;
     }
 
     public void setLife(int life)
@@ -90,6 +94,8 @@ public class PlayerCharacter : MonoBehaviour
                     objectTake = raycastHit.transform.GetComponent<ObjectTake>();
                     inventory.Add(objectTake.name);
                     objectTake.Die();
+
+                    gun.GetComponent<Launcher>().addAmmo(30);
                 }
             }
         }
