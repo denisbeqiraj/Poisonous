@@ -11,6 +11,7 @@ public class DialogController : MonoBehaviour
     private string text = ""; // assigned to allow first line to be read below 
 
     private string file = "";
+    private string path = "Assets/Text/";
 
     private int numLines = 4;
 
@@ -19,7 +20,9 @@ public class DialogController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        /*var sr = File.CreateText("Search.txt");
+        sr.WriteLine("This is my file.");*/
+        textDialog.text = "Salve";
     }
 
     // Update is called once per frame
@@ -31,30 +34,36 @@ public class DialogController : MonoBehaviour
     {
         file = name;
 
-        theSourceFile = new FileInfo(file);
+        Debug.Log(path + file);
+
+        theSourceFile = new FileInfo(path + file);
         reader = theSourceFile.OpenText();
-        printLines(numLines);
+        talk(numLines);
     }
 
-    public void printLines(int numLines) {
+    public void talk(int numLines) {
         int i = 0;
 
-        while(i < numLines && text != null)
+        /*while(i < numLines && text != null)
         {
             text += reader.ReadLine();
             i++;
-        }
+        }*/
 
-        if(text != null)
+        /*text = "PPPPPPPPPPPPPPPPPPPPPPPPPPP\ndadad";*/
+        textDialog.text = "ok";
+
+        /*if(text != null)
         {
             textDialog.enabled = true;
             textDialog.text = text;
+            text = "";
         }
         else
         {
             textDialog.enabled = false;
             file = "";
-        }  
+        }*/  
     }
 
     public Boolean isReaderNull()
