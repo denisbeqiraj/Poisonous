@@ -2809,6 +2809,12 @@ MonoBehaviour:
   timeMultiplier: 1
   day: {fileID: 10304, guid: 0000000000000000f000000000000000, type: 0}
   night: {fileID: 2100000, guid: f531e09e2ad2fb440b4eed7605863143, type: 2}
+--- !u!1 &734609357 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 9182595230801070507, guid: e8c54262ba9b52a4db1efca13f058464,
+    type: 3}
+  m_PrefabInstance: {fileID: 9182595231380840389}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &787466738
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5286,6 +5292,11 @@ PrefabInstance:
       propertyPath: textAmmo
       value: 
       objectReference: {fileID: 1420412838}
+    - target: {fileID: 4111013292100478654, guid: 72e01a0b435917248b8568425c534740,
+        type: 3}
+      propertyPath: sharedStats
+      value: 
+      objectReference: {fileID: 734609357}
     - target: {fileID: 4111013292100478654, guid: 72e01a0b435917248b8568425c534740,
         type: 3}
       propertyPath: soundSource

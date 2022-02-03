@@ -62,7 +62,7 @@ public class Launcher : MonoBehaviour
 
         if (GameObject.Find("Warrok"))
         {
-            addAmmo(AmmoSingleton.total);
+            addAmmo(AmmoSingleton.instance.total);
         }
     }
     void Start()

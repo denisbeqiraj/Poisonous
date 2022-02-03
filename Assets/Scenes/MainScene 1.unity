@@ -2423,6 +2423,51 @@ Transform:
   m_Father: {fileID: 758578779}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &187428773
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 187428775}
+  - component: {fileID: 187428774}
+  m_Layer: 0
+  m_Name: GameObject
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &187428774
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 187428773}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5ce7233ced7f89498769ac96f9bebe7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  total: 0
+  gunAmmo: {fileID: 1155684254163943507}
+--- !u!4 &187428775
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 187428773}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 95
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &191744540
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -40888,7 +40933,6 @@ GameObject:
   - component: {fileID: 1155684254984814762}
   - component: {fileID: 1155684254984814761}
   - component: {fileID: 1155684254984814752}
-  - component: {fileID: 1155684254984814768}
   m_Layer: 11
   m_Name: Player
   m_TagString: Player
@@ -41027,7 +41071,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1155684254984814760}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 180, y: 35, z: 2100}
+  m_LocalPosition: {x: 2919.7, y: 35, z: 1287.7}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1155684253906288178}
@@ -41039,20 +41083,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1155684254984814768
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1155684254984814760}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d5ce7233ced7f89498769ac96f9bebe7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  total: 0
-  gunAmmo: {fileID: 1155684254163943507}
 --- !u!1 &1155684254988943629
 GameObject:
   m_ObjectHideFlags: 0
