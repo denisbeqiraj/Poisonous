@@ -18,6 +18,5 @@ public class AmmoSingleton : MonoBehaviour
     void Update()
     {
         total = gunAmmo.GetComponent<Launcher>().getTotal();
-        Debug.Log(total);
     }
 }

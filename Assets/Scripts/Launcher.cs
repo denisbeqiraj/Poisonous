@@ -45,7 +45,6 @@ public class Launcher : MonoBehaviour
 
     private GameObject weaponHand;
     // Start is called before the first frame update
-
     private void Awake()
     {
         weapon = new List<GameObject>();
