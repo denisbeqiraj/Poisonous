@@ -6,6 +6,7 @@ public class EnemyAI : MonoBehaviour
 {
     private UnityEngine.AI.NavMeshAgent navMesh;
     public GameObject[] player;
+    private float minDistance = 10;
     private TargetBehaviour target;
     public Animator animator;
     private float timeRemaining = -1;
@@ -68,9 +69,13 @@ public class EnemyAI : MonoBehaviour
             timeRemaining -= Time.deltaTime;
         }
 
-        if (!zombieSoundSource.isPlaying)
+        float distance = Vector3.Distance(transform.position, player[0].transform.position);
+        if (distance <= minDistance)
         {
-            zombieSoundSource.PlayOneShot(zombieAudioClip);
+            if (!zombieSoundSource.isPlaying)
+            {
+                zombieSoundSource.PlayOneShot(zombieAudioClip);
+            }
         }
 
     }
