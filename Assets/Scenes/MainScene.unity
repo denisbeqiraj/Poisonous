@@ -409,6 +409,28 @@ Transform:
   m_Father: {fileID: 694916047}
   m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &36735743 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 136256, guid: a154eb6d964c0254596a497f1a05c4aa,
+    type: 3}
+  m_PrefabInstance: {fileID: 1847296950}
+  m_PrefabAsset: {fileID: 0}
+--- !u!208 &36735744
+NavMeshObstacle:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 36735743}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Shape: 1
+  m_Extents: {x: 7.5, y: 7.5, z: 5}
+  m_MoveThreshold: 0.1
+  m_Carve: 0
+  m_CarveOnlyStationary: 1
+  m_Center: {x: 0, y: 0, z: 0}
+  m_TimeToStationary: 0.5
 --- !u!1001 &52301085
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -824,13 +846,25 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 158132, guid: ed4c136bec1e59d4d852cdbbac63b65b, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
     - target: {fileID: 183158, guid: ed4c136bec1e59d4d852cdbbac63b65b, type: 3}
       propertyPath: m_Name
       value: Village_House_V4
       objectReference: {fileID: 0}
+    - target: {fileID: 183158, guid: ed4c136bec1e59d4d852cdbbac63b65b, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 187462, guid: ed4c136bec1e59d4d852cdbbac63b65b, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
     - target: {fileID: 498008, guid: ed4c136bec1e59d4d852cdbbac63b65b, type: 3}
       propertyPath: m_RootOrder
-      value: 13
+      value: 14
       objectReference: {fileID: 0}
     - target: {fileID: 498008, guid: ed4c136bec1e59d4d852cdbbac63b65b, type: 3}
       propertyPath: m_LocalPosition.x
@@ -838,7 +872,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 498008, guid: ed4c136bec1e59d4d852cdbbac63b65b, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 43.07
+      value: 42.5
       objectReference: {fileID: 0}
     - target: {fileID: 498008, guid: ed4c136bec1e59d4d852cdbbac63b65b, type: 3}
       propertyPath: m_LocalPosition.z
@@ -2951,6 +2985,18 @@ PrefabInstance:
       propertyPath: m_Name
       value: Village_House_V1
       objectReference: {fileID: 0}
+    - target: {fileID: 123342, guid: 470ada972ce6ab04ea581a4d23092816, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 140960, guid: 470ada972ce6ab04ea581a4d23092816, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 165750, guid: 470ada972ce6ab04ea581a4d23092816, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
     - target: {fileID: 414800, guid: 470ada972ce6ab04ea581a4d23092816, type: 3}
       propertyPath: m_RootOrder
       value: 16
@@ -3356,6 +3402,28 @@ Transform:
   m_Father: {fileID: 694916047}
   m_RootOrder: 110
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &297347010 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 123342, guid: 470ada972ce6ab04ea581a4d23092816,
+    type: 3}
+  m_PrefabInstance: {fileID: 254483825}
+  m_PrefabAsset: {fileID: 0}
+--- !u!208 &297347011
+NavMeshObstacle:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 297347010}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Shape: 1
+  m_Extents: {x: 5, y: 7.5, z: 5}
+  m_MoveThreshold: 0.1
+  m_Carve: 0
+  m_CarveOnlyStationary: 1
+  m_Center: {x: 0, y: 0, z: 0}
+  m_TimeToStationary: 0.5
 --- !u!1001 &299294390
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7333,6 +7401,28 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bb98861c48ad2024ca93498c7dd93a6c, type: 3}
+--- !u!1 &630125661 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 183158, guid: ed4c136bec1e59d4d852cdbbac63b65b,
+    type: 3}
+  m_PrefabInstance: {fileID: 65646437}
+  m_PrefabAsset: {fileID: 0}
+--- !u!208 &630125663
+NavMeshObstacle:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 630125661}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Shape: 1
+  m_Extents: {x: 7.5, y: 5, z: 10}
+  m_MoveThreshold: 0.1
+  m_Carve: 0
+  m_CarveOnlyStationary: 1
+  m_Center: {x: 0, y: 1, z: -1}
+  m_TimeToStationary: 0.5
 --- !u!1 &633588571
 GameObject:
   m_ObjectHideFlags: 0
@@ -8697,9 +8787,29 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 109246, guid: 425a2375bbeaffd4aa8aefea2454c645, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
     - target: {fileID: 133066, guid: 425a2375bbeaffd4aa8aefea2454c645, type: 3}
       propertyPath: m_Name
       value: Village_WindMill (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 133066, guid: 425a2375bbeaffd4aa8aefea2454c645, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 139130, guid: 425a2375bbeaffd4aa8aefea2454c645, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 185762, guid: 425a2375bbeaffd4aa8aefea2454c645, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 198726, guid: 425a2375bbeaffd4aa8aefea2454c645, type: 3}
+      propertyPath: m_Layer
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 406706, guid: 425a2375bbeaffd4aa8aefea2454c645, type: 3}
       propertyPath: m_RootOrder
@@ -9218,9 +9328,29 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 109246, guid: 425a2375bbeaffd4aa8aefea2454c645, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
     - target: {fileID: 133066, guid: 425a2375bbeaffd4aa8aefea2454c645, type: 3}
       propertyPath: m_Name
       value: Village_WindMill
+      objectReference: {fileID: 0}
+    - target: {fileID: 133066, guid: 425a2375bbeaffd4aa8aefea2454c645, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 139130, guid: 425a2375bbeaffd4aa8aefea2454c645, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 185762, guid: 425a2375bbeaffd4aa8aefea2454c645, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 198726, guid: 425a2375bbeaffd4aa8aefea2454c645, type: 3}
+      propertyPath: m_Layer
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 406706, guid: 425a2375bbeaffd4aa8aefea2454c645, type: 3}
       propertyPath: m_RootOrder
@@ -9917,6 +10047,28 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 831686993}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &835542687 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 124056, guid: fd39af73f562aa04cb405bd0953160cc,
+    type: 3}
+  m_PrefabInstance: {fileID: 1719888379}
+  m_PrefabAsset: {fileID: 0}
+--- !u!208 &835542688
+NavMeshObstacle:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 835542687}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Shape: 1
+  m_Extents: {x: 10, y: 7.5, z: 4.5}
+  m_MoveThreshold: 0.1
+  m_Carve: 0
+  m_CarveOnlyStationary: 1
+  m_Center: {x: 0, y: 0, z: 0}
+  m_TimeToStationary: 0.5
 --- !u!1 &842153575
 GameObject:
   m_ObjectHideFlags: 0
@@ -15658,6 +15810,28 @@ Transform:
   m_Father: {fileID: 694916047}
   m_RootOrder: 140
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1320974196 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 133066, guid: 425a2375bbeaffd4aa8aefea2454c645,
+    type: 3}
+  m_PrefabInstance: {fileID: 760143922}
+  m_PrefabAsset: {fileID: 0}
+--- !u!208 &1320974197
+NavMeshObstacle:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1320974196}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Shape: 1
+  m_Extents: {x: 7.5, y: 7.5, z: 7.5}
+  m_MoveThreshold: 0.1
+  m_Carve: 0
+  m_CarveOnlyStationary: 1
+  m_Center: {x: 0, y: 0, z: 0}
+  m_TimeToStationary: 0.5
 --- !u!1 &1324784123
 GameObject:
   m_ObjectHideFlags: 0
@@ -19897,6 +20071,22 @@ PrefabInstance:
       propertyPath: m_Name
       value: Village_House_V2
       objectReference: {fileID: 0}
+    - target: {fileID: 124056, guid: fd39af73f562aa04cb405bd0953160cc, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 132062, guid: fd39af73f562aa04cb405bd0953160cc, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 134994, guid: fd39af73f562aa04cb405bd0953160cc, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 146760, guid: fd39af73f562aa04cb405bd0953160cc, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
     - target: {fileID: 401514, guid: fd39af73f562aa04cb405bd0953160cc, type: 3}
       propertyPath: m_RootOrder
       value: 15
@@ -21975,7 +22165,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 401514, guid: fd39af73f562aa04cb405bd0953160cc, type: 3}
       propertyPath: m_RootOrder
-      value: 14
+      value: 13
       objectReference: {fileID: 0}
     - target: {fileID: 401514, guid: fd39af73f562aa04cb405bd0953160cc, type: 3}
       propertyPath: m_LocalPosition.x
@@ -22587,6 +22777,26 @@ Transform:
   m_Father: {fileID: 694916047}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1953106007 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 133066, guid: 425a2375bbeaffd4aa8aefea2454c645,
+    type: 3}
+  m_PrefabInstance: {fileID: 725105962}
+  m_PrefabAsset: {fileID: 0}
+--- !u!64 &1953106009
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1953106007}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: -1
+  m_Mesh: {fileID: 0}
 --- !u!1001 &1954555533
 PrefabInstance:
   m_ObjectHideFlags: 0
