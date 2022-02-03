@@ -11,6 +11,8 @@ public class EnemyAI : MonoBehaviour
     private float timeRemaining = -1;
     [SerializeField] private GameObject head;
     [SerializeField] private GameObject leg;
+    private bool isThrow;
+    public GameObject projectile;
     // Start is called before the first frame update
     void Start()
     {
@@ -19,6 +21,14 @@ public class EnemyAI : MonoBehaviour
         animator = GetComponentInChildren<Animator>();
         player = GameObject.FindGameObjectsWithTag("Player");
         Invoke("Despawn", 2);
+        if (gameObject.name.Contains("throw"))
+        {
+            isThrow = true;
+        }
+        else
+        {
+            isThrow = false;
+        }
     }
 
     // Update is called once per frame
@@ -29,6 +39,10 @@ public class EnemyAI : MonoBehaviour
             navMesh.isStopped = false;
             navMesh.destination = player[0].transform.position;
             animator.SetBool("isRun", true);
+            if (isThrow)
+            {
+
+            }
         }
         else
         {

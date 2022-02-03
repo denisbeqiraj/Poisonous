@@ -11,10 +11,9 @@ public class Shot : MonoBehaviour
     public GameObject explosion;
 
     private Rigidbody _rigidbody;
-
     void Awake()
     {
-        _rigidbody = GetComponent<Rigidbody>();
+        _rigidbody = gameObject.GetComponent<Rigidbody>();
     }
 
     // Start is called before the first frame update
