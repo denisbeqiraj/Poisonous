@@ -41043,6 +41043,8 @@ MonoBehaviour:
   health: 100
   dialogSystem: {fileID: 4910920451216632845}
   textPieces: {fileID: 1084213416}
+  zombiePower: {fileID: 8186976719566916738, guid: d573acbbe22413441881610cec998c02,
+    type: 3}
 --- !u!23 &1155684254984814765
 MeshRenderer:
   m_ObjectHideFlags: 0
