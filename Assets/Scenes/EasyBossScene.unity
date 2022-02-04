@@ -4522,6 +4522,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sharedStats: {fileID: 734609357}
+  menuController: {fileID: 356059542}
 --- !u!95 &1737116851
 Animator:
   serializedVersion: 3

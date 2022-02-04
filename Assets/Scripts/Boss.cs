@@ -7,6 +7,8 @@ public class Boss : MonoBehaviour
     private int life = 500;
     [SerializeField] private GameObject sharedStats;
 
+    [SerializeField] private MenuController menuController;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -26,6 +28,8 @@ public class Boss : MonoBehaviour
     {
         if (life <= 0)
         {
+            Screen.lockCursor = false;
+            menuController.loadScene("WinScene");
             Destroy(gameObject);
         }
     }
