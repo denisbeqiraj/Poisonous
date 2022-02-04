@@ -167,6 +167,13 @@ public class Launcher : MonoBehaviour
                         build.hit(damageStructures);
                     }
 
+                    Boss boss;
+                    if (raycastHit.transform.tag == "Boss")
+                    {
+                        boss = raycastHit.transform.GetComponent<Boss>();
+                        boss.Hit(damageZombie);
+                    }
+
                     GameObject objectHit = Instantiate(particleHit[0], raycastHit.point, raycastHit.transform.rotation);
                     if (objectHit != null)
                     {
