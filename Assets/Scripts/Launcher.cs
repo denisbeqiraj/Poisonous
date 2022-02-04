@@ -136,8 +136,53 @@ public class Launcher : MonoBehaviour
 
         // Input has been put outside cooldown check so we can do something else if character cannot shoot, for example display something or reproduce a sound
         if (
-            (Input.GetMouseButtonDown(0)
-            || automaticShoot && Input.GetMouseButton(0)) && !buildingSystem.isEditMode
+            ((Input.GetMouseButtonDown(0)
+            || automaticShoot && Input.GetMouseButton(0)) && !buildingSystem.isEditMode) && weapon[0].activeSelf
+        )
+        {
+            if (shot && _canShoot)
+            {
+                weaponMagazine -= 1;
+
+                // reset cooldown
+                _cooldownTimer = _cooldown;
+                RaycastHit raycastHit;
+
+                Vector3 pos = new Vector3(shotSpawn.position.x, shotSpawn.position.y, shotSpawn.position.z);
+
+                if (Physics.Raycast(pos, camera.transform.forward, out raycastHit, 1000))
+                {
+
+                    TargetBehaviour enemy;
+                    if (raycastHit.transform.tag == "Enemy")
+                    {
+                        enemy = raycastHit.transform.GetComponent<TargetBehaviour>();
+                        enemy.Hit(damageZombie);
+                    }
+
+                    BuildHittable build;
+                    if (raycastHit.transform.tag.Contains("Build"))
+                    {
+                        build = raycastHit.transform.GetComponent<BuildHittable>();
+                        build.hit(damageStructures);
+                    }
+
+                    GameObject objectHit = Instantiate(particleHit[0], raycastHit.point, raycastHit.transform.rotation);
+                    if (objectHit != null)
+                    {
+                        Destroy(objectHit, 2f);
+                    }
+
+                }
+                _shotCounter++;
+
+                soundSource.PlayOneShot(shotAudio);
+            }
+        }
+
+        if (
+            ((Input.GetMouseButton(0)
+            ) && !buildingSystem.isEditMode) && weapon[1].activeSelf
         )
         {
             if (shot && _canShoot)
