@@ -958,8 +958,11 @@ MonoBehaviour:
   animator: {fileID: 0}
   head: {fileID: 3252555445463905123}
   leg: {fileID: 3252555444782769401}
-  zombieSoundSource: {fileID: 0}
+  zombieSoundSource: {fileID: 5108781875957486819, guid: 36a00848d6b96624bb863897bc0151c4,
+    type: 3}
   zombieAudioClip: {fileID: 8300000, guid: 672dc66daf54c9143b051f9a9d5e0eac, type: 3}
+  sharedStats: {fileID: 9182595230801070507, guid: e8c54262ba9b52a4db1efca13f058464,
+    type: 3}
   projectile: {fileID: 0}
 --- !u!1 &2626100158111169270
 GameObject:

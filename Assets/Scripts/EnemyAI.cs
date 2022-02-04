@@ -100,14 +100,14 @@ public class EnemyAI : MonoBehaviour
             timeRemaining -= Time.deltaTime;
         }
 
-        float distance = Vector3.Distance(transform.position, player[0].transform.position);
+        /*float distance = Vector3.Distance(transform.position, player[0].transform.position);
         if (distance <= minDistance)
         {
             if (!zombieSoundSource.isPlaying)
             {
                 zombieSoundSource.PlayOneShot(zombieAudioClip);
             }
-        }
+        }*/
 
     }
 
