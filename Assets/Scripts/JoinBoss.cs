@@ -18,7 +18,7 @@ public class JoinBoss : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Vector3.Magnitude(player.transform.position - gameObject.transform.position) < 10) {
+        if (player.GetComponent<PlayerCharacter>().getPieces() == 2 && Vector3.Magnitude(player.transform.position - gameObject.transform.position) < 10) {
             string difficulty = shared_stats.getDifficulty();
             switch (difficulty)
             {
