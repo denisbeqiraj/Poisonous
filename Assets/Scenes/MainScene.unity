@@ -16730,6 +16730,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Sitting Talking 2
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: c5da147a95386d44f953dc2c83f26ec9,
+        type: 3}
+      propertyPath: m_TagString
+      value: Npc
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c5da147a95386d44f953dc2c83f26ec9, type: 3}
 --- !u!1 &1255330384 stripped
