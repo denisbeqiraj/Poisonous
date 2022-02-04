@@ -64,6 +64,10 @@ public class Launcher : MonoBehaviour
         {
             addAmmo(AmmoSingleton.instance.total);
         }
+        else
+        {
+            addAmmo(30);
+        }
     }
     void Start()
     {
