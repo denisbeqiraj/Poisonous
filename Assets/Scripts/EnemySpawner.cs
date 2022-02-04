@@ -40,4 +40,9 @@ public class EnemySpawner : MonoBehaviour
             }
         }
     }
+
+    public void setEnemy(GameObject obj)
+    {
+        zombie = obj;
+    }
 }

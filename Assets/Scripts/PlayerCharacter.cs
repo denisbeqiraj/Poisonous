@@ -39,6 +39,8 @@ public class PlayerCharacter : MonoBehaviour
 
     public UnityEngine.UI.Text textPieces;
     private int pieces = 0;
+
+    [SerializeField] private GameObject zombiePower;
     private void Start()
     {
         slider.value = 100;
@@ -131,6 +133,8 @@ public class PlayerCharacter : MonoBehaviour
 
                     file = file + ".txt";
 
+                    string prev = file;
+
                     if (file.Equals(dialogController.getFile()))
                     {
                         dialogController.talk(4);
@@ -142,9 +146,19 @@ public class PlayerCharacter : MonoBehaviour
                     if (!canSpawn && dialogController.isFileNull())
                     {
                         canSpawn = true;
-                        gameObject.GetComponent<EnemySpawner>().startRepeating();
+
+                        if (prev.Equals("Sitting Talking 2.txt"))
+                        {
+                            gameObject.GetComponent<EnemySpawner>().setEnemy(zombiePower);
+                        }
+                        else
+                        {
+                            gameObject.GetComponent<EnemySpawner>().startRepeating();
+                        }
 
                         gun.GetComponent<Launcher>().addAmmo(30);
+
+                        canSpawn = false;
                     }
                 }
             }
